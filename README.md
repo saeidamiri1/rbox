@@ -1,5 +1,4 @@
 # rbox: An integrated Atom package for R
-
 This package is a collection of several packages to run R via Atom.
 
 
@@ -18,7 +17,6 @@ This package is a collection of several packages to run R via Atom.
 8. [License](#license)
 
 ## Background
-
 R is a central aspect in the applied sciences to write program and communing codes among statisticians and data scientist, its impact on the development modern statistics is inevitable.  The current researches  more especially for big data  can not be done solely using R and should use different programming languages, hence having a modern Integrated development environment (IDE) is very important. Atom is modern IDE that is developed by GitHub.
 
 
@@ -43,16 +41,13 @@ It is a collection of several packages to facilitate working with R, especially 
 
 
 ## Contributing
-
 This is the first version, any contribute is appreciated. Take a look at our [Contributing Guide](https://github.com/saeidamiri1/rbox/blob/master/CONTRIBUTING.md) to get started.
 
 ## Changelog
-
 Every release is documented on the [GitHub Releases page](https://github.com/saeidamiri1/rbox/releases).
 
 
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/saeidamiri1/rbox/blob/master/LICENSE.md) file for details
 
 **[⬆ back to top](#contents)**
