@@ -1,0 +1,348 @@
+'.source.r':
+    'apply function over marigin {base}':
+     'prefix': 'apply(x,MARGIN,FUN)'
+     'body': 'apply(${1:x},,)'
+    'apply function over a List or vector {base}':
+     'prefix': 'lapply(x,FUN)'
+     'body': 'lapply(${1:x},)'
+    'apply function over a ragged array {base}':
+     'prefix': 'tapply(x,FUN)'
+     'body': 'tapply(${1:x},)'
+    'combine values {base}':
+      'prefix': 'c(x)'
+      'body': 'c(${1:})'
+    'convert to array {base}':
+      'prefix': 'as.array'
+      'body': 'as.array(${1:?})'
+    'convert to data frame {base}':
+      'prefix': 'as.data.frame(x)'
+      'body': 'as.data.frame(${1:x})'
+    'convert to numeric {base}':
+      'prefix': 'as.numeric(x)'
+      'body': 'as.numeric(${1:x})'
+    'convert to logical {base}':
+      'prefix': 'as.logical(x)'
+      'body': 'as.logical(${1:?})'
+    'convert to complex {base}':
+      'prefix': 'as.complex(x)'
+      'body': 'as.complex(${1:x})'
+    'convert to character {base}':
+      'prefix': 'as.character(x)'
+      'body': 'as.character(${1:x})'
+    'attach data {base}':
+      'prefix': 'attach'
+      'body': 'attach(${1:data})'
+    'breaks out loop {base}':
+      'prefix': 'break'
+      'body': 'break'
+    'round to smallest integer {base}':
+      'prefix': 'ceiling(x)'
+      'body': 'ceiling(x)'
+    'computes the combinations  {base}':
+      'prefix': 'choose(n,k)'
+      'body': 'choose(${1:n},${2:k})'
+    'correlation {base}':
+      'prefix': 'cor()'
+      'body': 'cor(${1:x})'
+    'combine by columns {base}':
+      'prefix':'cbind()'
+      'body':'cbind(${0:},${1:})'
+    'create data frames  {base}':
+     'prefix': 'data.frame(x,y)'
+     'body': 'data.frame(${1:data},)'
+    'detach {base}':
+     'prefix': 'detach'
+     'body': 'detach(${1:data})'
+    'lagged of vector {base}':
+      'prefix': 'diff(x)'
+      'body': 'diff(${1:x})'
+    'dimension {base}':
+      'prefix': 'dim(x)'
+      'body': 'dim(${1:x})'
+    'show files {base}':
+      'prefix': 'dir'
+      'body': 'dir()'
+    'empirical cumu. dist. fun. {base}':
+      'prefix': 'ecdf(x)'
+      'body': 'ecdf(${1:x})'
+    'FALSE {base}':
+      'prefix': 'FALSE'
+      'body': 'FALSE'
+    'round to largest integer {base}':
+      'prefix': 'floor(x)'
+      'body': 'floor(${1:x})'
+    'for Loop {base}':
+     'prefix': 'for'
+     'body': """
+       for (${1:i} in ${2::}){
+        }
+       """
+    'function {base}':
+     'prefix': 'function'
+     'body': """
+       function(${1:x}){
+       ${3: return($4)}
+       }
+       """
+    'display plot of object {Idisplay}':
+      'prefix': 'display'
+      'body': """
+        display(${1:x})
+      """
+    'getwd get workDir {base}':
+      'prefix':'getwd'
+      'body':'getwd()'
+    'help via dispaly {IRdispaly}':
+      'prefix': 'help(display(x))'
+      'body': 'help(display(${1:x}))'
+    'help via {base}':
+      'prefix': 'help()'
+      'body': 'help(${1:?})'
+    'hist {base}':
+      'prefix': 'histogram'
+      'body':'hist(${1:x},freq=FALSE)'
+
+    'intersetion of sets {base}':
+      'prefix': 'intersect(x,y)'
+      'body': 'intersect(${1:x},)'
+
+    'if,else if,else {base}':
+     'prefix': 'ifelseifelse'
+     'body': """
+      if (${1:true}) {
+        $2
+       } else (${3:false}) {
+        $4
+       } else {
+        $5
+       }
+     """
+    'if,else {base}':
+     'prefix': 'ifelse'
+     'body': """
+      if (${1:true}) {
+        $2
+       } else {
+        $3
+       }
+     """
+    'ifelse {base}':
+     'prefix': 'ifelse(,,)'
+     'body': """
+      ifelse (${1:true},$2,$3)
+     """
+    'if {base}':
+     'prefix': 'if'
+     'body': """
+      if (${1:true}){
+      }
+     """
+    'test for mising {base}':
+      'prefix': 'is.na(x)'
+      'body': 'is.na(${1:?})'
+    'test for null {base}':
+      'prefix': 'is.null(x)'
+      'body': 'is.null(${1:x})'
+    'test for array {base}':
+      'prefix': 'is.array(x)'
+      'body': 'is.array(${1:x})'
+    'test for data frame {base}':
+      'prefix': 'is.data.frame(x)'
+      'body': 'is.data.frame(${1:?})'
+    'test for numeric {base}':
+      'prefix': 'is.numeric(x)'
+      'body': 'is.numeric(${1:x})'
+    'test for complex {base}':
+      'prefix': 'is.complex(x)'
+      'body': 'is.complex(${1:x})'
+    'test for character {base}':
+      'prefix': 'is.character(x)'
+      'body': 'is.character(${1:x})'
+    'NULL {base}':
+      'prefix': 'NULL'
+      'body': 'NULL'
+    'Kolmogorov-Smirnov test {stat}':
+      'prefix': 'ks.test(x,y)'
+      'body': 'ks.test(${1:x},)'
+    'library {base}':
+      'prefix': "library()"
+      'body': """
+       library('${1:}')
+       """
+    'length {base}':
+      'prefix': 'length(x)'
+      'body': 'length(${1:x})'
+    'mean with trim {base}':
+      'prefix': 'mean(x,trim=0,na.rm=FALSE)'
+      'body': 'mean(${1:x},trim=0,na.rm=FALSE)'
+    'mean {base}':
+      'prefix': 'mean(x)'
+      'body': 'mean(${1:x})'
+    'mit NA {stat}':
+      'prefix': 'na.omit()'
+      'body': 'na.omit(${0:x})'
+    'number of columns {base}':
+      'prefix': 'ncol(x)'
+      'body': 'ncol(${1:x})'
+    'number of rows {base}':
+      'prefix': 'nrow(x)'
+      'body': 'nrow(${1:x})'
+    'option to resize plot {base}':
+      'prefix': 'options(repr.plot.width=4, repr.plot.height=3)'
+      'body': 'options(repr.plot.width=4, repr.plot.height=3)'
+    'sample quantile {stats}':
+      'prefix': 'quantile(x,probs=)'
+      'body': 'quantile(${1:x},probs=)'
+    'calculayte range {base}':
+      'prefix': 'range(x)'
+      'body': 'range(${1:x})'
+    'return ranks of values {base}':
+      'prefix': 'rank(x)'
+      'body': 'rank(${1:x})'
+    'combine by row {base}':
+      'prefix':'rbind()'
+      'body':'rbind(${0:x},${1:})'
+    'read csv {utils}':
+      'prefix': 'read.csv(x,file=".csv")'
+      'body': 'read.csv(${0:x},file=".csv",sep="",header=TRUE,row.names=TRUE,col.names=TRUE)'
+    'read table {utils}':
+      'prefix': 'read.table(x,file=".csv")'
+      'body': 'read.table(${0:x},file=".csv",sep="",header=TRUE,row.names=TRUE,col.names=TRUE)'
+    'read delim {utils}':
+      'prefix': 'read.delim(x,file=".csv")'
+      'body': 'read.delim(?,file=".csv",sep="",header=TRUE,row.names=TRUE,col.names=TRUE)'
+    'remove all everything {base}':
+      'prefix':'rm(list=ls())'
+      'body':  'rm(list=ls())'
+    'remove objects {base}':
+      'prefix':'rm(x)'
+      'body':  'rm(${0:x})'
+    'round {base}':
+      'prefix': 'round(x,digits=0)'
+      'body': 'round(${0:x},digits=0)'
+    'Read R Code from a File {base}':
+      'prefix':'source(file="")'
+      'body': 'source(file="")'
+    'sort a vector or factor {base}':
+      'prefix':'sort(x,decreasing=FALSE)'
+      'body': 'sort(${0:x},decreasing=FALSE)'
+    'save {base}':
+      'prefix': 'save(x,file=".RData") '
+      'body': 'save(${0:x},file=".RData")'
+    'sample1 {base}':
+      'prefix': 'sample(x,size,replace=FALSE,prob=NULL)'
+      'body': 'sample(${1:x},${2:},replace=FALSE,prob=NULL)'
+    'sample2 {base}':
+      'prefix': 'sample(x,n)'
+      'body': 'sample(${1:x},${2:?})'
+    'difference of sets {base}':
+      'prefix': 'setdiff(x,y)'
+      'body': 'setdiff(${1:x},)'
+    'sequence  {base}':
+      'prefix': 'sequence (from,to,by)'
+      'body': 'seq(${1:from},${2:to},${3:by})'
+    'set working dirc {base}':
+      'prefix':'setwd("")'
+      'body':'setwd("")'
+    'compare two sets {base}':
+      'prefix': 'setequal(x,y)'
+      'body': 'setequal(${1:x},)'
+    'rounded as significant value {base}':
+      'prefix': 'signif(x,digits=0)'
+      'body': 'signif(x,digits=0)'
+    'sort {base}':
+      'prefix': 'sort(x)'
+      'body': 'sort(${1:x})'
+    'return system time {base}':
+      'prefix': 'Sys.time()'
+      'body': 'Sys.time()'
+    'summary {base}':
+      'prefix':'summary(x)'
+      'body':'summary(${0:x})'
+    't.test {stats}':
+      'prefix':'t.test(x,alternative ="two.sided",mu=0)'
+      'body':'t.test(${0:x},alternative ="two.sided",mu=)'
+    't.test with details {stats}':
+      'prefix':'t.test(x,y=NULL,.....)'
+      'body':'t.test(${0:x},y=NULL,alternative =c("two.sided","less","greater"),mu=?,paired=FALSE,var.equal=FALSE,conf.level=0.95 )'
+    'return without duplicate {base}':
+      'prefix': 'unique(x)'
+      'body': 'unique(${1:x})'
+    'scaling and cetering {base}':
+      'prefix': 'scale(x)'
+      'body': 'scale(${1:x})'
+    'build a contingency table {base}':
+      'prefix': 'table(x,y)'
+      'body': 'table(${1:x},)'
+    'TRUE {base}':
+      'prefix': 'TRUE'
+      'body': 'TRUE'
+    'union of sets {base}':
+      'prefix': 'union(x,y)'
+      'body': 'union(${1:x},)'
+    'variance {stats}':
+      'prefix': 'var(x)'
+      'body': 'var(${1:x})'
+    'while Loop {base}':
+      'prefix': 'while'
+      'body': """
+       while (${1:?}){
+        }
+       """
+    'write {base}':
+      'prefix': 'write(x,file="data")'
+      'body': 'write(${1:x},file="")'
+    'write.csv {base}':
+      'prefix': 'write.csv(x,file=".csv")'
+      'body': 'write.csv(${1:x},file=".csv",row.names=TRUE,col.names=TRUE)'
+    'write.table {base}':
+      'prefix': 'write.table(x,file=".csv")'
+      'body': 'write.table(${1:x},file=".csv",row.names=TRUE,col.names=TRUE)'
+    'log {base}':
+      'prefix': 'log(x)'
+      'body': 'log(${1:x})'
+    'log with base {base}':
+      'prefix': 'logb(x,base=exp(1))'
+      'body': 'logb(${1:x},base=exp(1))'
+    'log10 {base}':
+      'prefix': 'log10(x)'
+      'body': 'log10(${1:x})'
+    'exponential {base}':
+      'prefix': 'exp(x)'
+      'body': 'exp(${1:x})'
+    'cos {base}':
+      'prefix': 'cos(x)'
+      'body': 'cos(${1:x})'
+    'sin {base}':
+      'prefix': 'sin(x)'
+      'body': 'sin(${1:x})'
+    'tan {base}':
+      'prefix': 'tan(x)'
+      'body': 'tan(${1:x})'
+    'arc-cos {base}':
+      'prefix': 'acos(x)'
+      'body': 'acos(${1:x})'
+    'arc-sin {base}':
+      'prefix': 'asin(x)'
+      'body': 'asin(${1:x})'
+    'arc-tan {base}':
+      'prefix': 'atan(x)'
+      'body': 'atan(${1:x})'
+    'hyperbolic  cos{base}':
+      'prefix': 'cosh(x)'
+      'body': 'cosh(${1:x})'
+    'hyperbolic  sin{base}':
+      'prefix': 'sinh(x)'
+      'body': 'sinh(${1:x})'
+    'hyperbolic  tan{base}':
+      'prefix': 'tanh(x)'
+      'body': 'tanh(${1:x})'
+    'arc cosh {base}':
+      'prefix': 'acosh(x)'
+      'body': 'acosh(${1:x})'
+    'arc-sinh {base}':
+      'prefix': 'asinh(x)'
+      'body': 'asinh(${1:x})'
+    'arc-tanh {base}':
+      'prefix': 'atanh(x)'
+      'body': 'atanh(${1:x})'

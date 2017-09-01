@@ -1,0 +1,140 @@
+'.source.r':
+# stats
+    'compute ANOVA {stat}':
+      'prefix': 'anova(object)'
+      'body': 'anova(${1:object})'
+    'perform k-means {stats}':
+      'prefix': 'kmeans(x, centers,...)'
+      'body': 'kmeans(${1:x},)'
+    ' exact Binomial test {stat}':
+      'prefix': 'binom.test(x, n,alternative = "two.sided", p = 0.5,conf.level = 0.95)'
+      'body': 'binom.test(${1:x},${2:n},p=0.5,alternative = "two.sided",conf.level= 0.95)'
+    ' perform chi-squared tests and GOF {stat}':
+      'prefix': 'chisq.test(x, y = NULL, correct = TRUE)'
+      'body': 'chisq.test(${1:x},correct = TRUE)'
+    'computes distance matrix {stat}':
+      'prefix': 'dist(x, method = "euclidean")'
+      'body': 'dist(${1:x})'
+    'fisher test {stats}':
+      'prefix': 'fisher.test(x)'
+      'body': 'fisher.test(${1:x})'
+    ' perform glm {stat}':
+      'prefix': 'glm(formula,family = gaussian, data,...)'
+      'body': 'glm(${1:y}~,family = gaussian,data="")'
+    ' perform lm {stat}':
+      'prefix': 'lm(formula,data,...)'
+      'body': 'glm(${1:y}~,data="")'
+    ' optimization {stat}':
+      'prefix': 'optim(par, fn)'
+      'body': 'optim(${1:par}, ${2:fn})'
+    ' wilcox test {stat}':
+      'prefix': 'wilcox.test(x, y = NULL,alternative ="two.sided",mu = 0)'
+      'body': 'wilcox.test(${1:x},y,alternative ="two.sided",mu = 0)'
+    'density beta {stats}':
+      'prefix': 'dbeta(x,shape1,shape2)'
+      'body': 'dbeta(${1:x},,)'
+    'probably beta {stats}':
+      'prefix': 'pbeta(q,shape1,shape2)'
+      'body': 'pbeta(${1:q},,)'
+    'qantile beta {stats}':
+      'prefix': 'qbeta(p,shape1,shape2)'
+      'body': 'qbeta(${1:p},,)'
+    'random beta {stats}':
+      'prefix': 'rbeta(n,shape1,shape2)'
+      'body': 'rbeta(${1:n},,)'
+    'density binom {stats}':
+      'prefix': 'dbinom(x,size,prob)'
+      'body': 'dbinom(${1:x},,)'
+    'probably binom {stats}':
+      'prefix': 'pbinom(q,size,prob)'
+      'body': 'pbinom(${1:q},,)'
+    'qantile binom {stats}':
+      'prefix': 'qbinom(p,size,prob)'
+      'body': 'qbinom(${1:p},,)'
+    'random binom {stats}':
+      'prefix': 'rbinom(n,size,prob)'
+      'body': 'rbinom(${1:n},,)'
+    'density chisq {stats}':
+      'prefix': 'dchisq(x,df)'
+      'body': 'dchisq(${1:x},)'
+    'probably chisq {stats}':
+      'prefix': 'pchisq(q,df)'
+      'body': 'pchisq(${1:q},)'
+    'qantile chisq {stats}':
+      'prefix': 'qchisq(p,df)'
+      'body': 'qchisq(${1:p},)'
+    'random chisq {stats}':
+      'prefix': 'rchisq(n,df)'
+      'body': 'rchisq(${1:n},)'
+    'density exp {stats}':
+      'prefix': 'dexp(x,rate=1)'
+      'body': 'dexp(${1:x},)'
+    'probably exp {stats}':
+      'prefix': 'pexp(q,rate=1)'
+      'body': 'pexp(${1:q},)'
+    'qantile exp {stats}':
+      'prefix': 'qexp(p,rate=1)'
+      'body': 'qexp(${1:p},)'
+    'random exp {stats}':
+      'prefix': 'rexp(n,rate=1)'
+      'body': 'rexp(${1:n},)'
+    'density f {stats}':
+      'prefix': 'df(x,df1,df2)'
+      'body': 'df(${1:x},,)'
+    'probably f {stats}':
+      'prefix': 'pf(q,df1,df2)'
+      'body': 'pf(${1:q},,)'
+    'qantile f {stats}':
+      'prefix': 'qf(p,df1,df2)'
+      'body': 'qf(${1:p},,)'
+    'random f {stats}':
+      'prefix': 'rf(n,df1,df2)'
+      'body': 'rf(${1:n},,)'
+    'density gamma {stats}':
+      'prefix': 'dgamma(x,shape,rate=1)'
+      'body': 'dgamma(${1:x},,)'
+    'probably gamma {stats}':
+      'prefix': 'pgamma(q,shape,rate=1)'
+      'body': 'pgamma(${1:q},,)'
+    'qantile gamma {stats}':
+      'prefix': 'qgamma(p,shape,rate=1)'
+      'body': 'qgamma(${1:p},,)'
+    'random gamma {stats}':
+      'prefix': 'rgamma(n,shape,rate=1)'
+      'body': 'rgamma(${1:n},,)'
+    'density  norm {stats}':
+      'prefix': 'dnorm(x,mean=0,sd=1)'
+      'body': 'dnorm(${1:x},,)'
+    'probably norm {stats}':
+      'prefix': 'pnorm(q,mean=0,sd=1)'
+      'body': 'pnorm(${1:q},,)'
+    'qantile norm {stats}':
+      'prefix': 'qnorm(p,mean=0,sd=1)'
+      'body': 'qnorm(${1:p},,)'
+    'random norm {stats}':
+      'prefix': 'rnorm(n,mean=0,sd=1)'
+      'body': 'rnorm(${1:n},,)'
+    'density t {stats}':
+      'prefix': 'dt(x,df)'
+      'body': 'dt(${1:x},)'
+    'probably t {stats}':
+      'prefix': 'pt(q,df)'
+      'body': 'pt(${1:q},)'
+    'qantile t {stats}':
+      'prefix': 'qt(p,df)'
+      'body': 'qt(${1:p},)'
+    'random t {stats}':
+      'prefix': 'rt(n,df)'
+      'body': 'rt(${1:n},)'
+    'density unif {stats}':
+      'prefix': 'dunif(x,min=0,max=1)'
+      'body': 'dunif(${1:x},,)'
+    'probably unif {stats}':
+      'prefix': 'qunif(q,min=0,max=1)'
+      'body': 'punif(${1:q},,)'
+    'qantile unif {stats}':
+      'prefix': 'punif(p,min=0,max =1)'
+      'body': 'punif(${1:p},,)'
+    'random unif {stats}':
+      'prefix': 'runif(n,min=0,max=1)'
+      'body': 'runif(${1:n},)'

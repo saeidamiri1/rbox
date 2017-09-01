@@ -1,0 +1,41 @@
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Rbox'
+      'submenu': [
+        {
+          label: 'Select Kernel\\R'
+          'command': 'hydrogen:select-kernel'
+        },{
+          label: 'Run'
+          'command': 'hydrogen:run'
+        }, {
+          label: 'Run and Move Down'
+          'command': 'hydrogen:run-and-move-down'
+        }, {
+          label: 'Run All'
+          'command': 'hydrogen:run-all'
+        }, {
+          label: 'Run All Above'
+          'command': 'hydrogen:run-all-above'
+        }, {
+          label: 'Interrupt R'
+          'command': 'escape':'hydrogen:interrupt-kernel'
+        },{
+          label: 'shutdown Kernel'
+          'command': 'hydrogen:shutdown-kernel'
+        },{
+          label: 'restart R'
+          'command': 'hydrogen:restart-kernel'
+        },{
+          label: 'Paste to terminal'
+          'command': 'termination:insert-selected-text'
+        },{
+          label: 'beautify R'
+          'command': 'atom-beautify:beautify-editor'
+        }
+      ]
+    ]
+  }
+]
