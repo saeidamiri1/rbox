@@ -21,8 +21,8 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "Hydrogen": "1.20.0",
-    "atom-beauty": "0.30.4",
-    "termination": "0.6.0"
+    "hydrogen": "^1.20.0",
+    "atom-beauty": "^0.30.5",
+    "termination": "^0.6.0"
   }
 }

@@ -1,9 +1,8 @@
 # rbox
 
-This package is a collection of several packages to run R via Atom.
 
 Note: This is an early test release of the package.
-***** If you see any errors or bugs, please leave a message *****
+
 
 ![hero](https://raw.githubusercontent.com/saeidamiri1/generalfiles/master/rec1.gif)
 
