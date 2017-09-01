@@ -1,7 +1,6 @@
-# rbox
+# rbox: An integrated Atom package for R
 
-
-Note: This is an early test release of the package.
+This package is a collection of several packages to run R via Atom.
 
 
 ![hero](https://raw.githubusercontent.com/saeidamiri1/generalfiles/master/rec1.gif)
@@ -28,7 +27,7 @@ R is a central aspect in the applied sciences to write program and communing cod
 - Access to several terminals
 - Very useful snippets to run R.
 
-## [Documentation]
+## Documentation
 See wiki (https://github.com/saeidamiri1/rbox/wiki)
 
 - [Installation](https://github.com/saeidamiri1/rbox/wiki/Installation)
