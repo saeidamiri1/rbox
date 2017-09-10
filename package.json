@@ -1,6 +1,6 @@
 {
   "name": "rbox",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "an integrated R package for ATOM Editor",
   "author": "Saeid Amiri",
   "keywords": [
