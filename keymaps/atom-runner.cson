@@ -1,0 +1,55 @@
+# ------------ Editor --------------
+'atom-text-editor:not([mini])':
+    'ctrl-c':'hydrogen:interrupt-kernel'
+    'shift-ctrl-K':'hydrogen:select-kernel'
+    'alt-shift-r':'termination:insert-selected-text'
+    'shift-ctrl-o':'hydrogen:toggle-output-area'
+    'shift-ctrl-w':'hydrogen:add-watch'
+    'shift-ctrl-e':'hydrogen:remove-watch'
+
+# ---------- Workspace -----------
+'.platform-darwin, .atom-workspace':
+    'ctrl-c':'hydrogen:interrupt-kernel'
+    'shift-ctrl-K':'hydrogen:select-kernel'
+    'alt-shift-r':'termination:insert-selected-text'
+    'shift-ctrl-q':'hydrogen:shutdown-kernel'
+    'shift-ctrl-r':'hydrogen:restart-kernel'
+    'shift-ctrl-o':'hydrogen:toggle-output-area'
+    'shift-ctrl-w':'hydrogen:add-watch'
+    'shift-ctrl-e':'hydrogen:remove-watch'
+
+'.platform-win32 atom-workspace, .platform-linux atom-workspace':
+    'ctrl-c':'hydrogen:interrupt-kernel'
+    'shift-ctrl-K':'hydrogen:select-kernel'
+    'alt-shift-r':'termination:insert-selected-text'
+    'shift-ctrl-q':'hydrogen:shutdown-kernel'
+    'shift-ctrl-r':'hydrogen:restart-kernel'
+    'shift-ctrl-o':'hydrogen:toggle-output-area'
+    'shift-ctrl-w':'hydrogen:add-watch'
+    'shift-ctrl-e':'hydrogen:remove-watch'
+
+    'ctrl-enter': 'hydrogen:run'
+    'ctrl-shift-backspace': 'hydrogen:clear-results'
+    'ctrl-alt-enter': 'hydrogen:run-cell'
+    'ctrl-enter': 'hydrogen:run'
+    'ctrl-shift-alt-enter': 'hydrogen:run-all'
+
+# ---------- Workspace -----------
+'.platform-darwin, .atom-text-editor':
+    'ctrl-c':'hydrogen:interrupt-kernel'
+    'alt-r':'termination:insert-selected-text'
+    'shift-ctrl-q':'hydrogen:shutdown-kernel'
+    'shift-ctrl-r':'hydrogen:restart-kernel'
+    'shift-ctrl-o':'hydrogen:toggle-output-area'
+    'shift-ctrl-w':'hydrogen:add-watch'
+    'shift-ctrl-e':'hydrogen:remove-watch'
+
+'.platform-win32 atom-text-editor:not([mini]), .platform-linux atom-text-editor:not([mini])':
+    'ctrl-shift-backspace': 'hydrogen:clear-results'
+    'ctrl-c':'hydrogen:interrupt-kernel'
+    'alt-r':'termination:insert-selected-text'
+    'shift-ctrl-q':'hydrogen:shutdown-kernel'
+    'shift-ctrl-r':'hydrogen:restart-kernel'
+    'shift-ctrl-o':'hydrogen:toggle-output-area'
+    'shift-ctrl-w':'hydrogen:add-watch'
+    'shift-ctrl-e':'hydrogen:remove-watch'

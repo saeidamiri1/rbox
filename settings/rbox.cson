@@ -1,0 +1,8 @@
+".source.r":
+  'editor':
+    autoIndent: true
+    autoIndentOnPaste: true
+    commentStart: '#'
+    foldEndPattern : '(^\\s*\\)|^\\s*\\})'
+    increaseIndentPattern: '(^.*\\{[^}\\"\']*$)|(^.*\\([^)\\"\']*$)'
+    decreaseIndentPattern: '(^(.*\\*/)?\\s*\\}[;\\s]*$)|(^(.*\\*/)?\\s*\\)[;\\s]*$)'
