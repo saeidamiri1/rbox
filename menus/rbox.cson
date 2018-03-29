@@ -1,0 +1,47 @@
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Rbox'
+      'submenu': [
+        {
+          label: 'Run'
+          'command': 'hydrogen:run'
+        }, {
+          label: 'Add watch'
+          'command': 'hydrogen:add-watch'
+        }, {
+          label: 'Remove watch'
+          'command': 'hydrogen:remove-watch'
+        }, {
+          label: 'output'
+          'command': 'hydrogen:toggle-output-area'
+        }, {
+          label: 'Run and Move Down'
+          'command': 'hydrogen:run-and-move-down'
+        }, {
+          label: 'Run All'
+          'command': 'hydrogen:run-all'
+        }, {
+          label: 'Run All Above'
+          'command': 'hydrogen:run-all-above'
+        }, {
+          label: 'Interrupt R'
+          'command': 'escape':'hydrogen:interrupt-kernel'
+        },{
+          label: 'Shutdown R'
+          'command': 'hydrogen:shutdown-kernel'
+        },{
+          label: 'Restart R'
+          'command': 'hydrogen:restart-kernel'
+        },{
+          label: 'Paste to terminal'
+          'command': 'termination:insert-selected-text'
+        },{
+          label: 'Beautify R'
+          'command': 'atom-beautify:beautify-editor'
+        }
+      ]
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+# ---------- Editor --------------
+'atom-text-editor:not([mini])':
+   'ctrl-c':'hydrogen:interrupt-kernel'
+   'ctrl-alt-q':'hydrogen:shutdown-kernel'
+   'ctrl-alt-r':'hydrogen:restart-kernel'
+   'ctrl-alt-w':'hydrogen:add-watch'
+   'ctrl-alt-e':'hydrogen:remove-watch'
+   'ctrl-alt-o':'hydrogen:toggle-output-area'
+   'alt-r':'termination:insert-selected-text'
+#'alt-shift-r':'termination:insert-selected-text'
+# darwin---------- Workspace -----------
+'.platform-darwin atom-text-editor:not([mini])':
+   'alt-r':'termination:insert-selected-text'
+# Win and linux---------- Workspace -----------
+'.platform-win32 atom-text-editor:not([mini]), .platform-linux atom-text-editor:not([mini])':
+   'ctrl-enter': 'hydrogen:run'
+   'ctrl-shift-backspace': 'hydrogen:clear-results'
+   'ctrl-alt-enter': 'hydrogen:run-cell'
+   'ctrl-shift-alt-enter': 'hydrogen:run-all'
