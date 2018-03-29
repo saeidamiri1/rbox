@@ -1,0 +1,27 @@
+'.source.r':
+# utils
+    'return the first of an object {utils}':
+      'prefix': 'head(x)'
+      'body': 'head(${1:x})'
+    'return the last of an object {utils}':
+      'prefix': 'tail(x)'
+      'body': 'tail(${1:x})'
+    'download and install packages  {utils}':
+      'prefix': 'install.packages(pkgs)'
+      'body': 'install.packages(${1:})'
+    'load or display available datasets  {utils}':
+      'prefix': "data()"
+      'body': """
+       data('${1:}')
+       """
+# graphics
+    'produce boxplots {graphics}':
+      'prefix': 'boxplot(x)'
+      'body': 'boxplot(${1:x})'
+    'produce plots {graphics}':
+      'prefix': 'plot(x)'
+      'body': 'plot(${1:x})'
+# lattice
+    'produce bar chart {lattice}':
+      'prefix': 'barchart(x)'
+      'body': 'barchart(${1:x})'
